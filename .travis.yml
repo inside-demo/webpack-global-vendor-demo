@@ -2,8 +2,8 @@ language: node_js
 node_js: node
 
 before_deploy:
-  - 'npm run build'
-  - 'git add -f build'
+  - npm run build
+  - echo -e "node_modules\npackage-lock.json" > .gitignore
 
 deploy:
   provider: pages
